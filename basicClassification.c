@@ -3,7 +3,7 @@
 
 int isPrime(int prime){
     for(int i=2; i<prime;i++){
-        if(prime % i == 0) return 0;
+        if((prime % i) == 0) return 0;
     }
     return 1;
 }
@@ -21,6 +21,6 @@ int isStrong(int strong){
        finalNum +=count;
        count = 1;
     }
-    if(count == saveStrong) return 1;
+    if(finalNum == saveStrong) return 1;
     return 0;
 }
