@@ -12,5 +12,8 @@ int isPrime(int);
 /*Strong number is a special number whose sum of the factorial of digits is equal to the original number. For Example: 145 is strong number
 1! + 4! + 5! = 145
 */
+int len(int);
+int findAms(int,int);
+int isStrong(int);
 int isStrong(int);
 #endif
