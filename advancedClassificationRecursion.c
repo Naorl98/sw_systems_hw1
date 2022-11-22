@@ -24,7 +24,7 @@ int isPalindrome(int poli){
     if(poli>=1000 && poli<10000){
         if(((poli/100)%10) == 0 && ((poli/10)&10) != 0 ) return 0;
     }
-    else if (poli%10 != poli/getTenLength(poli)) return 0;
+    if (poli%10 != poli/getTenLength(poli)) return 0;
     poli = poli % getTenLength(poli);
     poli = poli /10;
     return isPalindrome(poli);
