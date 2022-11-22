@@ -13,7 +13,20 @@ int isPrime(int);
 1! + 4! + 5! = 145
 */
 int isStrong(int);
+/*
+give the char length of int number with recursion
+*/
 int len(int);
+/*
+give the sum of the nth powers of num digits
+*/
 int findAms(int,int);
+/*
+reverse the int number
+*/
 int reverse(int,int);
+/*
+give the char length of int number with loops
+*/
+int getLength(int);
 #endif
