@@ -8,9 +8,9 @@ WARN= -Wall -g
 all:recursived recursives loopd loops maindloop maindrec mains
 mains:	$(MAIN) libclassrec.a
 	$(GC) $(WARN) $(MAIN) libclassrec.a -o mains -lm
-maindloop: libclassloops.so
+maindloop: $(MAIN) libclassloops.so
 	$(GC) $(WARN) $(MAIN) ./libclassloops.so -o maindloop 
-maindrec: libclassrec.so
+maindrec: $(MAIN) libclassrec.so
 	$(GC) $(WARN) $(MAIN) ./libclassrec.so -o maindrec -lm
 loops: libclassloops.a
 libclassloops.a:  $(LOOP) $(BASE)
