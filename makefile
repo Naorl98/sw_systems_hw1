@@ -12,7 +12,8 @@ maindloop: $(MAIN) loopd
 			$(GC) $(WARN) $(MAIN) ./libclassloops.so -o maindloop 
 maindrec: $(MAIN) recursived
 			$(GC) $(WARN) $(MAIN) ./libclassrec.so -o maindrec -lm
-loops:  $(LOOP) $(BASE)
+loops: libclassloops.a
+libclassloops.a:  $(LOOP) $(BASE)
 		$(AR) -rcs libclassloops.a  $(LOOP) $(BASE)
 loopd:  $(LOOP) $(BASE)
 		$(GC) -shared -fPIC -o libclassloops.so  $(LOOP) $(BASE)
