@@ -1,6 +1,7 @@
 #include "Numclass.h"
 #include <math.h>
 int isArmstrong(int arms){
+    if(arms == 0) return 0;
     int length = len(arms);
     int num =  findAms( arms, length);
     if(num == arms) return 1;
@@ -15,18 +16,14 @@ int len(int l){
      if(l < 10) return 1;
     return 1+ len(l/10); 
 }
-int getTenLength(int a){
-    if(a < 10 ) return 1; 
-    return 10 * getTenLength(a/10);
-}
+int reverse(int a, int new){
+    if(a == 0 ) return new; 
+    new = (new*10) + (a%10);
+    return reverse(a/10, new};
 int isPalindrome(int poli){
-    if(poli < 10) return 1;
-    if(poli>=1000 && poli<10000){
-        if(((poli/100)%10) == 0 && ((poli/10)&10) != 0 ) return 0;
-    }
-    if (poli%10 != poli/getTenLength(poli)) return 0;
-    poli = poli % getTenLength(poli);
-    poli = poli /10;
-    return isPalindrome(poli);
-
+    if(poli == 0 ) return 0;
+    if(poli <10) return 1;
+    int newPoli = reverse(poli,0);
+    if(newPoli == poli) return 1;
+    else return 0;
 }
