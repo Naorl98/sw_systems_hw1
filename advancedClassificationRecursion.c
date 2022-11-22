@@ -19,7 +19,8 @@ int len(int l){
 int reverse(int a, int new){
     if(a == 0 ) return new; 
     new = (new*10) + (a%10);
-    return reverse(a/10, new};
+    return reverse(a/10, new);
+}
 int isPalindrome(int poli){
     if(poli == 0 ) return 0;
     if(poli <10) return 1;
