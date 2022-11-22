@@ -9,7 +9,6 @@ int isArmstrong(int arms){
 
 int findAms(int num, int length){
     if(num <10) return pow((double)num,(double)length);
-    double pows =  pow((double)(num%10),(double)length);
     return pow((double)(num%10),(double)length) + findAms(num/10,length);
 }
 int len(int l){
